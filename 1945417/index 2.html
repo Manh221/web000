@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="황성원" />
+    <meta name="keywords" content="빅데이터, django, python" />
+    <title>Man Shopping Mall</title>
+    <script src="https://kit.fontawesome.com/775c063c3d.js" crossorigin="anonymous"></script>
+    <style>
+
+        body{
+            width: 80vw;
+            background-color: rgb(255, 255, 255);
+        }
+        header, footer{
+            height: 100px;
+        }
+        nav {
+            height: 50px;
+        }
+        section{
+            display: flex;
+        }
+        .content{
+            flex : 4;
+        }
+        aside{
+            flex : 1;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+          }
+          
+          li {
+            float: left;
+            border-right:1px solid #bbb;
+          }
+          
+          li:last-child {
+            border-right: none;
+          }
+          
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+    
+          }
+          
+          li a:hover:not(.active) {
+            background-color: #111;
+          }
+          
+          .active {
+            background-color: #465203;
+          }
+          h2 {
+            text-align: center;
+            border: 3px solid rgb(0, 0, 0);
+            background-color: rgb(205, 171, 1);
+            color: white;
+          }
+  
+          
+    </style>
+</head>
+<body>
+   <!--header+nav+section>article*3+aside^footer--> 
+   <header id="home">
+    <i class="fa-solid fa-bars"></i>
+    <h1> 부딘만</h1>
+   </header>
+   <nav>
+    <!--ul>li*5>a{메인메뉴$} -->
+    <div class="home1">
+    <ul>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">쇼핑몰</a></li>
+        <li><a href="#">패키지</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="./gallery.html">부딘만</a></li>
+    </ul>
+   </nav>
+   <section>
+    <div class="content">
+    <article>
+        <div class="gallery">
+            <a target="_blank" href="./images/web-1.jpeg">
+              <img src="./images/web-1.jpeg" alt="Cinque Terre" width="760" height="400">
+            </a>
+          </div>
+    <h2>제품 판매</h2>
+          <table>
+            <tr>
+                <td><img src="./images/ao.jpeg" width="250" height="350" alt=""></td>
+                <td><img src="./images/ao2.jpeg" width="250" height="350" alt=""></td>
+                <td><img src="./images/ao3.jpeg" width="250" height="350" alt=""></td>
+            </tr>
+        </table>
+        <h2>바지 판매</h2>
+        <table>
+          <tr>
+              <td><img src="./images/q.jpeg" width="250" height="350" alt=""></td>
+              <td><img src="./images/q3.jpeg" width="250" height="350" alt=""></td>
+              <td><img src="./images/q1.jpeg" width="250" height="350" alt=""></td>
+          </tr>
+      </table>
+        <div class="action">
+            <h2>대외활동리스트</h2>
+            <!-- table>tr>th*3^tr*3>td*3 -->
+            <table border="1">
+                <tr>
+                    <th>기간</th>
+                    <th>대외활동</th>
+                    <th>주최</th>
+                </tr>
+                <tr>
+                    <td>2021.3.</td>
+                    <td>마케팅전략 경진대회</td>
+                    <td>정보시스템학회</td>
+                </tr>
+                <tr>
+                    <td>2022.05.</td>
+                    <td>롯데 빅데이터 경진대회</td>
+                    <td>롯데그룹</td>
+                </tr>
+                <tr>
+                    <td>2022.08.</td>
+                    <td>머신러닝 교육프로그램</td>
+                    <td>동아대학교</td>
+                </tr>
+            </table>
+        </div>
+    </article>
+    <br><br>
+    <article>
+        <div class="media">
+            <h2>좋아하는 음악</h2>
+            <audio src="./media/music01.mp3"  controls></audio>
+            <br>
+            <h2>북극곰을 살리자</h2>
+            <video src="./media/movie.mp4" controls width="50%"></video>
+            <h2>소개</h2>
+            <iframe width="760" height="338" src="https://www.youtube.com/embed/m6gj8uUD4Uw" title="Look Book Fresh Summer Quần áo nam - thời trang nam - 360boutique.vn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </article>
+    <article>
+        <div class="gallery">
+            <iframe src="./gallery.html" width="60%" height="300" frameborder="0"></iframe>
+        </div>
+    </article>
+    </div>
+    <aside> 
+        <div class="login">
+            <form action="#" method="post">
+                회원ID : <input type="text" name="id" id=""><br>
+                비밀번호: <input type="password" name="pw" id=""><br>
+                <input type="submit" value="제출">
+                <input type="button" value="회원가입">
+            </form>
+        </div>
+        <div class="bookmark">
+            <a href="http://mis.donga.ac.kr" target="_blank">경영정보학과</a><br>
+            <a href="./gallery.html">갤러리</a><br>
+            <a href="#home">홈이동</a><br>
+        </div>
+
+    </aside>
+   </section>
+   <footer>
+      copyright@부딘만
+      <div class="sns">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-sharp fa-solid fa-envelope"></i>
+      </div>
+   </footer>   
+</body>
+</html>
